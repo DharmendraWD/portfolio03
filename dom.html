@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- fonts   Rubik Iso, Oooh Baby, ubuntu  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="prac.css">
+    <title>DOM - Document Object Model</title>
+
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+/* position: fixed; */
+font-family: ubuntu;
+background-color:  #212121;
+color: white;
+}
+.main {
+    width: 100%;;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-family:Rubik Iso;
+    margin-top: 30px;
+}
+
+.main1stChild {
+   position: relative;
+   top: 26px;
+   margin: 30px 2px;
+   background: black;
+   padding: 12px 0;
+}
+.ri-arrow-down-fill{
+    color: white;
+    margin-left: 40px;
+}
+.ri-arrow-right-line{
+    color: greenyellow;
+    font-size: 20px;
+}
+.heading {
+    font-size: 20px;
+    color: rgb(255, 119, 119);
+    text-align: center;
+background-color: rgb(10, 10, 10);
+    margin: 0 92px;
+    border-radius: 22px;
+}
+
+.headingSolution {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: roboto;
+}
+
+.forMore {
+    color: yellow;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    font-family: Oooh Baby;
+    font-weight: 900;
+}
+.forMore:hover {
+color: royalblue;
+}
+ .forMore p{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    font-size: 19px;
+    margin: 0 22px;
+    font-family: ubuntu;
+    font-weight: 100;
+
+}
+
+.explanations {
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.left, .right{
+    width: 49.6%;
+}
+
+.opacityShow {
+    opacity: 1;
+    /* position: relative; */
+}
+.output{
+    font-family: ubuntu;
+    margin: 5px 0 13px 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+.eImages{
+width:60%;
+margin: 0 auto;
+} 
+
+
+
+@media(max-width:1000px){
+    .eImages {
+        width: 80%;
+    
+    }
+}
+
+/* Small Mobile Media queries  */
+@media(max-width:700px){
+    .heading {
+        font-size: 14px;
+        background-color: black;
+    }
+    .headingSolution {
+        font-size: 14px;
+    }
+    .forMore {
+        font-size: 14px;
+    }
+    .forMore p {
+        font-size: 15px;
+        margin: 4px 7px;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+       width: 100%;
+    }
+    .main1stChild {
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main1stChild {
+        margin: 20px 0 0 0;
+        top: 0;
+    left: 0;
+    background: black;
+    padding: 12px 0;
+    }
+    .heading, .headingSolution {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+</style>
+</head>
+
+<body class="smallMobile largeMobile">
+
+    <h1>DOM</h1>
+    <div class="main">
+
+      
+       
+
+       <div class="left">    <!-- LEFT LEFT LEFT LEFT LEFT   -->
+
+        <div class="main1stChild">
+            <h2 class="heading">Access Parent's Child</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> parent.children </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/access parent children.PNG" alt="" class="eImages">
+                <p class="explained">Above there is a parent <b>div</b> and inside it there are some children of parent whose classes are <b>days</b>. Now How can I access all the classes <b> days </b>of <b>parent?</b> Here you go. <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/access parent children js].PNG" alt="" class="eImages">
+                <h3 class="output">Output</h3>
+                <img src="/images/access parent children outp[ut.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+        <div class="main1stChild">
+            <h2 class="heading">Access Last element of parent</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> parent.lastElementChild </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/access parent children.PNG" alt="" class="eImages">
+                <p class="explained">If there is multiple children inside parent div then how can you select the last children of parent? Here you go. <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/last elem js.PNG" alt="" class="eImages">
+                <h3 class="output">Output</h3>
+                <img src="/images/last elem output.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+        <div class="main1stChild">
+            <h2 class="heading">Create element</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> document.createElement("") </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/nthingbody.PNG" alt="" class="eImages">
+                <p class="explained">In the HTML there is nothing right now but you want to add or create an element through DOM in your HTML. How can you do this?<i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/creEle.PNG">
+                <h3 class="output">Output</h3>
+                <img src="/images/div.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+        <div class="main1stChild">
+            <h2 class="heading">Set Attribute</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> element.setAttribute("property", "value") </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/access parent children js].PNG" alt="" class="eImages">
+                <p class="explained">Set Attribute means if you want to set any attribute to your element, for example may be you want to set tittle, color, etc in your element then you can do it too. Suppose I want to set title tag in my parent element.  <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/setAttjs.PNG">
+                <h3 class="output">Output</h3>
+                <img src="/images/setatrtibuteout.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+
+       </div>
+      
+
+      <div class="right">           <!-- RIGHT RIGHT RIGHT RIGHT  -->
+        
+        <div class="main1stChild">
+            <h2 class="heading">Access First element of parent</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> parent.firstElementChild </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/access parent children.PNG" alt="" class="eImages">
+                <p class="explained">If there is multiple children inside parent div then how can you select the first children of parent? Here you go. <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/first elem js.PNG" alt="" class="eImages">
+                <h3 class="output">Output</h3>
+                <img src="/images/first elem js output.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+        <div class="main1stChild">
+            <h2 class="heading">Access parent through children</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> children.parentElement </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/access parent children.PNG" alt="" class="eImages">
+                <p class="explained">Suppose you have access of children class, how can you get access on parent through children. In the above image there is a parent and inside it consists 4 children. Now if you have access of children class of parent then you can easily get your parent element. <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/pajs.PNG" alt="" class="eImages">
+                <h3 class="output">Output</h3>
+                <img src="/images/paoutput.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+        <div class="main1stChild">
+            <h2 class="heading">Assign ID or Class</h2>
+            <p class="headingSolution"><i class="ri-arrow-right-line"></i></i> element.className="CLASSNAME" </p>
+            <div class="forMore"> Explanation <i class="ri-arrow-right-down-line"></i>
+                <div class="explanations">
+                    <img src="images/div.PNG" alt="" class="eImages">
+                <p class="explained">How to assign class or ID to any element? <i class="ri-arrow-down-fill"></i>
+                </p>
+                <img src="/images/added cl2.PNG" alt="" class="eImages">
+                <h3 class="output">Output</h3>
+                <img src="/images/addclass.PNG" alt="" class="eImages">
+            </div>
+        </div>
+        </div>
+
+        </div>
+       </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

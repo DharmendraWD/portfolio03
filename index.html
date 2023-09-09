@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GET SHEET</title>
+    <link rel="stylesheet" href="exceptHome.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
@@ -20,50 +21,75 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-<script src="app.js" defer></script>
+<!-- <script src="app.js" defer></script> -->
+<script src="navBar.js" defer></script>
 </head>
 <body class="mobile">
 
 <nav>
-    <div class="logo left">
-        <h1>Zayn Here</h1>
-    </div>
 
-    <div class="hamBurger">
-        <span class="hChild"></span>
-        <span class="hChild"></span>
-        <span class="hChild"></span>
-    </div>
-    <div class="right">
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Service</a>
-<a href="#">Portfolio</a>
-<a  href="mailto:zaynhere@icloud.com">Contact</a>
-<a href="https://www.upwork.com/freelancers/~010c382fc0726fb09b"><button>Hire Me</button></a>
-    </div>
 </nav>
 
-<div class="secSection">
-    <div class="leftText">
-        <p>Hello there, </p>
-        <h2 id="name">I'm Zayn Sharma</h2>
-        <h2 id="dev">A Frontend Developer</h2>
-        <h2 id="desg">& UI/Ux Designer</h2>
-        <div class="leftBtn">
-          <a href="#">  <button id="btn1">See CheetSheet <i class="ri-terminal-window-line"></i></button></a>
-            <a  href="mailto:zaynhere@icloud.com">    <button id="btn2">Contact Me <i class="ri-message-2-line"></i></button> </a>
-        </div>
-    </div>
-    
-    <div class="rightDP">
-        <img src="images//dp.jpeg" alt="">
+<div class="index-SecSection0">
+   <div class="indx-Sec-Child">
+    <div class="down">
+    <h1>Hi, I'm Zayn Sharma</h1>
+    <h2>A Fronted Developer</h2>
+    <p>A frontend web developer who has experience of 5+ years and have completed many projects throughout his journey. Always willing to learn new technologies and elaborating the words into design. We create unimaginable thoughts into design. </p>
+   <button  class="btn1"> <a href="cheatsheet.html" class="frstBtn">Cheatsheet</a></button>
+   <button  class="btn2"> <a href="mailto:zaynhere@icloud.com">Let's Talk</a></button>
+
+
+    <div class="links">
+        <a href="https://github.com/DharmendraWD"><i class="ri-github-line"></i></a>
+        <a href="#"><i class="ri-twitter-x-line"></i></a>
+        <a href="#"><i class="ri-linkedin-line"></i></a>
     </div>
 </div>
+   </div>
+   <div class="indx-Sec-Child">
+    <img src="images/dp2.jpg" alt="">
+   </div>
+</div>
 
+<footer>
 
-
-
+</footer>
 
 </body>
+<script>
+    // Get the h2 element
+const heading = document.querySelector(".indx-Sec-Child h2");
+
+// Get the text content of the h2 element
+const text = heading.textContent.trim();
+
+// Clear the text content of the h2 element
+heading.textContent = '';
+
+// Add a class for the blinking cursor
+heading.classList.add('blinking-cursor');
+
+let i = 0;
+const delay = 300; // Adjust the delay between each letter appearance (in milliseconds)
+
+    function addLetter() {
+    if (i < text.length) {
+        heading.textContent += text.charAt(i);
+        i++;
+        setTimeout(addLetter, delay);
+    } else {
+        // Remove the text and restart the animation
+        heading.textContent = '';
+        i = 0;
+        setTimeout(addLetter, delay);
+    }
+}
+
+
+
+// Start adding letters to the h2 element
+addLetter();
+
+</script>
 </html>

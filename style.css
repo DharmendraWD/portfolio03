@@ -1,199 +1,111 @@
+
+/* THIS CONTAINS STYLE OF ONLY HOMEPAGE CSS  */
 body{
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0;
-    width: 99%;
-height: 100vh;
-backdrop-filter: blur(12px);
-font-family: ubuntu;
+background-color: #000000;
+/* background-color: #091B2A; */
 color: white;
-/* position: fixed; */
-background: linear-gradient(to top right, rgb(206, 40, 40) 0%, rgb(7, 7, 97) 50%,  rgb(6, 8, 145) 100%);
-overflow: hidden;
+text-decoration: none;
 }
-nav{
-    height: 100px;
-display: flex;
-align-items: center;
-font-family: roboto;
+body a{
+text-decoration: none;
 }
-.right a{
-    padding: 0 22px;
-    text-decoration: none;
-list-style: none;
-color: white;
-transition: .4s ease-in-out;
-font-family: ubuntu;
+.index-SecSection0{
+    display: flex;
+    animation-duration: 2s;
+    animation-name: leftToRight;
 }
-.right a:hover{
-text-decoration:underline;
-color: rgb(236, 212, 236);
+.indx-Sec-Child{
+width: 50%;
 }
-.right{
- position: absolute;
- right: 73px;
-}
-.left{
- position: absolute;
- left: 203px;
- cursor: pointer;
-}
-.right button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-family: roboto;
-    border: .4px solid rgb(240, 42, 75);
-    padding: 0px 12px ;
-    border-radius: 12px;
-    cursor: pointer;
+.indx-Sec-Child img{
+    width: 100%;
     transition: .5s ease-in-out;
-    font-family: ubuntu;
-    font-size: 14px;
+    opacity: 60%;
 }
-.right button:hover {
-border: .4px solid transparent;
+.indx-Sec-Child img:hover{
+opacity: 90%;
 }
-
+.down{
+    padding: 20% 0 0 12%;
+}
 /* Right and Left div after Nav   */
-.secSection{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 8%;
+.down button{
+    padding: 6px 7px;
+    margin: 0 30px 30px 0;
+    border-radius: 7px;
 }
-.rightDP{
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-    align-items: baseline;
-
-
-}
-.rightDP img{
-    width: 30%;
-    border: 4px solid transparent;
-border-image: linear-gradient(to top right, rgb(111, 29, 219) 0%, rgb(230, 43, 214) 50%, rgb(89, 39, 230) 100%, rgb(202, 19, 187) 100%);
-border-image-slice: 1;
-border-radius: 12px;
-}
-.leftBtn button{
-    background-color: transparent;
-    border: none;
+.down button a{
     color: white;
-    padding: 2px 7px;
-    border-radius: 12px;
-cursor: pointer;
-font-family: ubuntu;
-font-size: 15px;
-}
-#btn2{
-    margin-left: 12px;
-    border: 1px solid #FF043F;
-}
-#btn1{
-background-color: #FF043F;
-}
-.leftText h2{
-    line-height: .8;
-}
-#name{
-    font-family: Rubik Iso;
-    font-size: 22px;
-}
-#dev{
-   color: #FF043F;
-   font-family: PT Serif;
-}
-#desg{
-    font-family: PT Serif;
-}
-
-
-/* Responsive part  */
-
-@media(max-width:800px){
-    .right{
-        display: none;
-    }
-.mobile .right{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-    position: relative;
-    right: 0;
-    margin: 37px 0 0 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: .2s ease-in-out;
-}
-nav{
-    transition: .4s ease-in-out;
-}
-.navHeight nav{
-    height: 100%;
-    backdrop-filter: blur(14%);
-    -webkit-backdrop-filter: blur(14%);
-    background: linear-gradient(to top right, rgb(102, 8, 255) 0%, rgb(7, 7, 97) 50%,  rgb(241, 21, 194) 100%);
-    animation-name: rightNav;
-    animation-duration: .4s;
-}
-.hamB .right{
-    opacity: 1;
-    pointer-events: all;
-}
-.mobile .right a{
-    padding: 7px 0;
+    font-family: ubuntu;
     font-size: 19px;
+    text-decoration: none;
 }
-.mobile .right p{
-    font-size: 18px;
+.btn1{
+    border: none;
+    background-color: #00A3E8;
+    color: black;
 }
-.mobile .leftText{
-    width: 100%;
+.frstBtn{
+    color: black !important;
 }
-.mobile .secSection {
-    grid-template-columns: repeat(1, 1fr);
+.btn2{
+    border: 1px solid #237DA7;
+    background-color: transparent;
 }
-.mobile #name, #dev, #desg {
-    font-size: 28px;
-    text-align: center;
+.down h2{
+    font-family:Rubik Iso;
+    transition: 1s ease-in-out;
+    height: 20px;
 }
-
-.mobile .leftBtn{
-    display: flex;
-    justify-content: space-evenly;
+/* .links{
+position: absolute;
+bottom: 60px;
+} */
+.links i{
+font-size: 18px;
+padding: 10px 10px;
+color: rgb(80, 64, 64);
+transition: .4s ease-in-out;
+border:1px solid ;
+border-radius: 50%;
+margin: 0 5px;
 }
-.mobile .rightDP img {
-    width: 60%;
-    animation-name: dp;
-    animation-duration: 1s;
+.links i:hover{
+color: rgb(131, 111, 111);
 }
-.mobile .logo {
-    top: 24px;
-    left: 15px;
-    z-index: 0;
-}
-.mobile .hamBurger {
-    position: fixed;
-    right: 15px;
-    z-index: 9999999; /* You don't need to specify z-index twice */
-}
-
-.mobile .hamBurger .hChild {
-    background-color: rgb(255, 255, 255);
-    height: 3px;
-    width: 30px;
-    margin: 7px 0;
-    display: block;
-}
+.down p{
+    font-family:ubuntu;
+    font-weight: 599;
 }
 
+
+/* Hide the text initially */
+#animated-heading {
+    white-space: nowrap;
+    /* overflow: auto; */
+    border-right: 2px solid #000; /* Add a blinking cursor */
+}
+
+/* Add a blinking cursor animation */
+@keyframes blink {
+    0% {
+        /* border-color: transparent; */
+        color: royalblue;
+    }
+    50% {
+        border-color: #000;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+.blinking-cursor {
+    animation: blink 1s infinite;
+}
+
+
+/* Animation  */
 @keyframes rightNav {
     0%{
         height: 0;
@@ -215,6 +127,47 @@ nav{
         top: -400px;
     }
 }
+@keyframes leftToRight {
+    0%{
+        position: relative;
+        right: 1200px;
+        opacity: 1%;
+    }
+    100%{
+        position: relative;
+        right: 0px;
+        opacity: 100%;
+    }
+}
 
 
 
+@media(max-width:800px){
+    .indx-Sec-Child img {
+        display: none;
+    }
+    .indx-Sec-Child {
+        width: initial;
+    }
+    .links {
+        bottom: 48px;
+    }
+    .down h1{
+        FONT-SIZE: 25px;
+    }
+    .down h2 {
+        font-size: 18px;
+    }
+    .links {
+        top: 65%;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+    }
+    .links i {
+        font-size: 14px;
+    }
+}
